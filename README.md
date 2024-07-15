@@ -1,3 +1,9 @@
+Go to page: https://paylocity-coding-challenge.vercel.app/
+
+or:
+
+`npm start` in project directory
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

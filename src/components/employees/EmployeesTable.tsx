@@ -29,7 +29,14 @@ const EmployeeTable: React.FC<Props> = ({ onEdit, onDelete, employees }) => {
           <TableRow key={employee.id}>
             <TableCell>{employee.name}</TableCell>
             <TableCell>{employee.dependents.map((dependent) => dependent.name).join(', ')}</TableCell>
-            <TableCell>{formatCurrency(calculateBenefitCost(employee.name, employee.dependents))}</TableCell>
+            <TableCell>
+              {formatCurrency(
+                calculateBenefitCost(
+                  employee.name,
+                  employee.dependents.filter((dependent) => dependent.name),
+                ),
+              )}
+            </TableCell>
             <TableCell>
               <div className="flex gap-2 w-fit ml-auto">
                 <Button type="button" variant="secondary" onClick={() => onEdit(employee)}>
